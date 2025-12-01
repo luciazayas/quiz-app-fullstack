@@ -60,5 +60,9 @@ El proyecto está dividido en páginas independientes:
 | `/quiz/score` | Envío de puntuación |
 | `/ranking/ranking` | Obtener ranking global |
 
----
+## Autora
+
+Lucía Zayas Martín
+Ingeniera de Software — Full-Stack & Mobile Developer
+🔗 www.linkedin.com/in/lucia-zayas-317833254
 
