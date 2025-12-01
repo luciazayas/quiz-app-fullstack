@@ -47,19 +47,20 @@ El proyecto está dividido en páginas independientes:
 
 ### Frontend
 | Tecnología | Uso |
+|-----------|-----|
 | **HTML5** | Estructura de todas las pantallas |
-| **CSS** | Diseño + responsive + UI |
+| **CSS3** | Diseño + responsive + UI |
 | **JavaScript (ES6)** | Lógica del juego, API requests |
 | **LocalStorage** | Token, puntuación final |
 
 ### Backend
 | Endpoint | Descripción |
+|----------|-------------|
 | `/auth/register` | Registro de nuevos usuarios |
 | `/auth/login` | Login, devuelve JWT |
 | `/quiz/question` | Obtención de preguntas |
 | `/quiz/score` | Envío de puntuación |
 | `/ranking/ranking` | Obtener ranking global |
-
 ## Autora
 
 Lucía Zayas Martín
