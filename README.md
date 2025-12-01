@@ -32,7 +32,7 @@ Este proyecto forma parte de mi portfolio como Ingeniera de Software.
 
 ---
 
-## 🧩 Arquitectura Frontend
+## Arquitectura Frontend
 
 El proyecto está dividido en páginas independientes:
 /src
