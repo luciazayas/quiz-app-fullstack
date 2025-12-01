@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <h1>ranking</h1>
+    <ul class="todos" id="todos"></ul></ul>
+    <button id="volver" type="button">VOLVER</button>
+  </body>
+</html>
+<script>
+    const volverBtn = document.getElementById("volver");
+    volverBtn.addEventListener('click', async () => {
+        window.location.href = "start.html";
+    })
+
+    const API_URL_RANKING = "http://localhost:3000/ranking/ranking"; 
+    let list = [];
+
+    async function loadQuiz() {
+        try{
+            const res = await fetch(API_URL_RANKING, { method: "GET" });
+            list = await res.json();
+        } catch (error) {
+                console.error("Error al cargar las preguntas:", error);
+                document.getElementById("todos").innerHTML = "<li>Error al cargar el ranking</li>";
+        }
+        show(list);
+    }
+    function show(list){
+        const contenedor = document.getElementById("todos");
+        contenedor.innerHTML = ""; 
+        if (!list || list.length === 0) {
+            contenedor.innerHTML = "<p>No hay datos de ranking disponibles.</p>";
+            return;
+        }
+        list.forEach((user) => {
+            const li = document.createElement("li");
+            li.textContent = `${user.username } — ${user.score}`;
+            contenedor.appendChild(li);
+        });
+    }
+
+     window.onload = loadQuiz;
+
+</script>

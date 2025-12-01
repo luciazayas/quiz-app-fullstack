@@ -1,0 +1,11 @@
+server.js → punto de entrada del servidor.
+
+db.js → contiene la conexión a la base de datos (reutilizable).
+
+routes/ → agrupa las rutas de tu API (cada tema en su archivo).
+
+middleware/ → funciones intermedias como validación de tokens.
+
+sql/ → scripts SQL (estructura y carga inicial).
+
+.env → variables secretas (contraseñas, claves, etc.).

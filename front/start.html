@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quiz App</title>
+  </head>
+  <body>
+     <button id="ranking" type="button">RANKING</button>
+     <button id="start">JUGAR</button>
+  
+  </body>
+</html>
+<script>
+  const startBtn = document.getElementById('start')
+  const rankingBtn = document.getElementById('ranking')
+  const messageEl = document.getElementById("message");
+  startBtn.addEventListener('click', async () => {
+      window.location.href = "quiz.html";
+  })
+  
+  rankingBtn.addEventListener('click', async () => {
+      window.location.href = "ranking.html";
+  })
+
+
+</script>

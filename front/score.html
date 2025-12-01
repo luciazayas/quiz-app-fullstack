@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <p id="resultado"></p>
+    <button id="inicio">inicio</button>
+    
+    <script >
+
+        const message = localStorage.getItem("ultimoMensaje");
+        if (message) {
+          document.getElementById("resultado").textContent = message;
+          document.getElementById("resultado").style.color = "green";
+          localStorage.removeItem("ultimoMensaje");
+        } else {
+          document.getElementById("resultado").textContent = "No se encontró resultado.";
+          document.getElementById("resultado").style.color = "gray";
+        }
+        const inicioBtn = document.getElementById("inicio");
+        inicioBtn.addEventListener('click', async () => {
+        window.location.href = "start.html";
+        })
+
+    </script>
+  </body>
+</html>

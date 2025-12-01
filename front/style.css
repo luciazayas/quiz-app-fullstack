@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* ---------------------- CONTAINERS ---------------------- */
+
+
+
+
+h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+/* ---------------------- FORM & INPUTS ---------------------- */
+
+input {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #8e44ad;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #732d91;
+}
+
+/* ---------------------- QUIZ ---------------------- */
+
+.quiz {
+  padding: 1rem;
+}
+
+.option-btn {
+  background-color: #a551c9b3;
+  margin: 0.5rem 0;
+}
+
+.correct {
+  background-color: #4caf50 !important;
+}
+
+.wrong {
+  background-color: #f44336 !important;
+}
+
+/* ---------------------- LISTA / RANKING ---------------------- */
+
+ul.todos {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+ul.todos li {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* ---------------------- RESULT PAGE ---------------------- */
+
+#resultado {
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  margin-bottom: 2rem;
+}
+
+/* ---------------------- MEDIA QUERIES ---------------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .quiz-container,
+  .container-index,
+  .login-container,
+  .ranking-container,
+  .score-container {
+    padding: 1.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .quiz-container,
+  .container-index,
+  .login-container,
+  .ranking-container,
+  .score-container {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  input {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
+}
